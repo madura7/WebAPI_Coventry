@@ -33,7 +33,8 @@ app.use("/api/auth", auth);
 // If collection is not exists it will create automatically and document too (Hero -> heros happen automatically)
 async function connectDb() {
     try {
-        await mongoose.connect('mongodb://localhost/herodb', {
+        //await mongoose.connect('mongodb://localhost/herodb', {
+        await mongoose.connect('mongodb+srv://admin:admin@cluster0-cdke1.gcp.mongodb.net/test?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
